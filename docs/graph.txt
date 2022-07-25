@@ -1,0 +1,52 @@
+digraph godep {
+splines=ortho
+nodesep=0.4
+ranksep=0.8
+node [shape="box",style="rounded,filled"]
+edge [arrowsize="0.5"]
+"github.com/JohannesKaufmann/html-to-markdown" [label="github.com/JohannesKaufmann/html-to-markdown" color="paleturquoise" URL="https://godoc.org/github.com/JohannesKaufmann/html-to-markdown" target="_blank"];
+"github.com/go-chi/chi/v5" [label="github.com/go-chi/chi/v5" color="paleturquoise" URL="https://godoc.org/github.com/go-chi/chi/v5" target="_blank"];
+"github.com/go-chi/chi/v5/middleware" [label="github.com/go-chi/chi/v5/middleware" color="paleturquoise" URL="https://godoc.org/github.com/go-chi/chi/v5/middleware" target="_blank"];
+"github.com/go-chi/cors" [label="github.com/go-chi/cors" color="paleturquoise" URL="https://godoc.org/github.com/go-chi/cors" target="_blank"];
+"github.com/go-telegram-bot-api/telegram-bot-api/v5" [label="github.com/go-telegram-bot-api/telegram-bot-api/v5" color="paleturquoise" URL="https://godoc.org/github.com/go-telegram-bot-api/telegram-bot-api/v5" target="_blank"];
+"github.com/mailjet/mailjet-apiv3-go" [label="github.com/mailjet/mailjet-apiv3-go" color="paleturquoise" URL="https://godoc.org/github.com/mailjet/mailjet-apiv3-go" target="_blank"];
+"github.com/microcosm-cc/bluemonday" [label="github.com/microcosm-cc/bluemonday" color="paleturquoise" URL="https://godoc.org/github.com/microcosm-cc/bluemonday" target="_blank"];
+"github.com/xRebellion/MessageDistributor" [label="github.com/xRebellion/MessageDistributor" color="paleturquoise" URL="https://godoc.org/github.com/xRebellion/MessageDistributor" target="_blank"];
+"github.com/xRebellion/MessageDistributor" -> "github.com/xRebellion/MessageDistributor/integration";
+"github.com/xRebellion/MessageDistributor" -> "github.com/xRebellion/MessageDistributor/integration/implementation";
+"github.com/xRebellion/MessageDistributor" -> "github.com/xRebellion/MessageDistributor/message";
+"github.com/xRebellion/MessageDistributor" -> "github.com/xRebellion/MessageDistributor/recipient";
+"github.com/xRebellion/MessageDistributor" -> "github.com/xRebellion/MessageDistributor/router";
+"github.com/xRebellion/MessageDistributor" -> "go.mongodb.org/mongo-driver/mongo";
+"github.com/xRebellion/MessageDistributor" -> "go.mongodb.org/mongo-driver/mongo/options";
+"github.com/xRebellion/MessageDistributor/integration" [label="github.com/xRebellion/MessageDistributor/integration" color="paleturquoise" URL="https://godoc.org/github.com/xRebellion/MessageDistributor/integration" target="_blank"];
+"github.com/xRebellion/MessageDistributor/integration/implementation" [label="github.com/xRebellion/MessageDistributor/integration/implementation" color="paleturquoise" URL="https://godoc.org/github.com/xRebellion/MessageDistributor/integration/implementation" target="_blank"];
+"github.com/xRebellion/MessageDistributor/integration/implementation" -> "github.com/JohannesKaufmann/html-to-markdown";
+"github.com/xRebellion/MessageDistributor/integration/implementation" -> "github.com/go-telegram-bot-api/telegram-bot-api/v5";
+"github.com/xRebellion/MessageDistributor/integration/implementation" -> "github.com/mailjet/mailjet-apiv3-go";
+"github.com/xRebellion/MessageDistributor/integration/implementation" -> "github.com/microcosm-cc/bluemonday";
+"github.com/xRebellion/MessageDistributor/integration/implementation" -> "go.mongodb.org/mongo-driver/bson";
+"github.com/xRebellion/MessageDistributor/integration/implementation" -> "go.mongodb.org/mongo-driver/mongo";
+"github.com/xRebellion/MessageDistributor/message" [label="github.com/xRebellion/MessageDistributor/message" color="paleturquoise" URL="https://godoc.org/github.com/xRebellion/MessageDistributor/message" target="_blank"];
+"github.com/xRebellion/MessageDistributor/message" -> "github.com/xRebellion/MessageDistributor/integration";
+"github.com/xRebellion/MessageDistributor/message" -> "github.com/xRebellion/MessageDistributor/recipient";
+"github.com/xRebellion/MessageDistributor/message" -> "github.com/xRebellion/MessageDistributor/utils";
+"github.com/xRebellion/MessageDistributor/recipient" [label="github.com/xRebellion/MessageDistributor/recipient" color="paleturquoise" URL="https://godoc.org/github.com/xRebellion/MessageDistributor/recipient" target="_blank"];
+"github.com/xRebellion/MessageDistributor/recipient" -> "github.com/go-chi/chi/v5";
+"github.com/xRebellion/MessageDistributor/recipient" -> "github.com/xRebellion/MessageDistributor/integration";
+"github.com/xRebellion/MessageDistributor/recipient" -> "github.com/xRebellion/MessageDistributor/utils";
+"github.com/xRebellion/MessageDistributor/recipient" -> "go.mongodb.org/mongo-driver/bson";
+"github.com/xRebellion/MessageDistributor/recipient" -> "go.mongodb.org/mongo-driver/bson/primitive";
+"github.com/xRebellion/MessageDistributor/recipient" -> "go.mongodb.org/mongo-driver/mongo";
+"github.com/xRebellion/MessageDistributor/router" [label="github.com/xRebellion/MessageDistributor/router" color="paleturquoise" URL="https://godoc.org/github.com/xRebellion/MessageDistributor/router" target="_blank"];
+"github.com/xRebellion/MessageDistributor/router" -> "github.com/go-chi/chi/v5";
+"github.com/xRebellion/MessageDistributor/router" -> "github.com/go-chi/chi/v5/middleware";
+"github.com/xRebellion/MessageDistributor/router" -> "github.com/go-chi/cors";
+"github.com/xRebellion/MessageDistributor/router" -> "github.com/xRebellion/MessageDistributor/message";
+"github.com/xRebellion/MessageDistributor/router" -> "github.com/xRebellion/MessageDistributor/recipient";
+"github.com/xRebellion/MessageDistributor/utils" [label="github.com/xRebellion/MessageDistributor/utils" color="paleturquoise" URL="https://godoc.org/github.com/xRebellion/MessageDistributor/utils" target="_blank"];
+"go.mongodb.org/mongo-driver/bson" [label="go.mongodb.org/mongo-driver/bson" color="paleturquoise" URL="https://godoc.org/go.mongodb.org/mongo-driver/bson" target="_blank"];
+"go.mongodb.org/mongo-driver/bson/primitive" [label="go.mongodb.org/mongo-driver/bson/primitive" color="paleturquoise" URL="https://godoc.org/go.mongodb.org/mongo-driver/bson/primitive" target="_blank"];
+"go.mongodb.org/mongo-driver/mongo" [label="go.mongodb.org/mongo-driver/mongo" color="paleturquoise" URL="https://godoc.org/go.mongodb.org/mongo-driver/mongo" target="_blank"];
+"go.mongodb.org/mongo-driver/mongo/options" [label="go.mongodb.org/mongo-driver/mongo/options" color="paleturquoise" URL="https://godoc.org/go.mongodb.org/mongo-driver/mongo/options" target="_blank"];
+}
